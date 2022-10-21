@@ -1,0 +1,53 @@
+#Author: Ryan Chian
+#Date: 4/10/2021
+#Revision: 03
+#Notes: This program will run on a separate page with quizlet open and will click through the flashcards
+
+import urllib
+import bs4
+from pynput.keyboard import Key, Controller
+from bs4 import BeautifulSoup
+import time
+
+keyboard = Controller()
+
+
+def flashcard_clicker(n):
+    for i in range(1, n + 1):
+        time.sleep(5)
+        keyboard.press(' ')
+        keyboard.release(' ')
+        time.sleep(5)
+        keyboard.press(Key.right)
+        keyboard.release(Key.right)
+
+
+def learn_cheat(n):
+    time.sleep(5)
+    for i in range(1, n + 1):
+        keyboard.press(' ')
+        keyboard.release(' ')
+        keyboard.press('2')
+        keyboard.release('2')
+
+        time.sleep(3)
+        keyboard.press('2')
+        keyboard.release('2')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
